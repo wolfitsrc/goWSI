@@ -7,9 +7,24 @@
 package main
 
 import (
-	"fmt"
+	"embed"
+
+	"github.com/wolfit-src/goWSI/components/gen"
 )
 
+// ///////////////////////////////////////////
+// configure your file name below
+const (
+	EmbFileName = "filename.txt"
+	ExtPrefix   = "C:/users/"
+)
+
+//go:embed filename.txt
+var Embedded embed.FS
+
+// Next run the following command: go run main.go -o name-installer.exe
+/////////////////////////////////////////////
+
 func main() {
-	fmt.Println("Welcome to WSI")
+	gen.InstallerExtract(Embedded, EmbFileName)
 }

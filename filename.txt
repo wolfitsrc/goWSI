@@ -1,0 +1,4 @@
+This text file is only for demonstration purposes.
+
+What you really want to do is inside main.go find the //go:embed filename.txt
+Then change the file to anything you want to be embedded.
