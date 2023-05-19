@@ -8,6 +8,7 @@ package main
 
 import (
 	"embed"
+	"fmt"
 
 	"github.com/wolfit-src/goWSI/components/gen"
 )
@@ -16,7 +17,7 @@ import (
 // configure your file name below
 const (
 	EmbFileName = "filename.txt"
-	ExtPrefix   = "C:/users/"
+	ExportLoc   = "c:/program files/wolfit/bin"
 )
 
 //go:embed filename.txt
@@ -26,5 +27,8 @@ var Embedded embed.FS
 /////////////////////////////////////////////
 
 func main() {
-	gen.InstallerExtract(Embedded, EmbFileName)
+	err := gen.InstallerExtract(Embedded, EmbFileName, ExportLoc)
+	if err != nil {
+		fmt.Println(err)
+	}
 }
