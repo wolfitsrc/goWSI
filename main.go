@@ -15,7 +15,7 @@ import (
 
 	"golang.org/x/sys/windows"
 
-	"github.com/wolfit-src/goWSI/components/gen"
+	"github.com/wolfitsrc/goWSI/components/gen"
 )
 
 // ///////////////////////////////////////////
