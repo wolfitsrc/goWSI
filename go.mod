@@ -1,4 +1,4 @@
-module github.com/wolfit-src/goWSI
+module github.com/wolfitsrc/goWSI
 
 go 1.20
 
